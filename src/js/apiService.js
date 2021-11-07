@@ -14,7 +14,9 @@ export default class ImagesApiService {
       .then(res => res.json())
       .then(({ hits }) => {
         this.incrementPage();
-        this.firstArrivedElement = hits[0].id;
+        if (hits.length !== 0) {
+           this.firstArrivedElement = hits[0].id;       
+        }
         return hits;
       });
   }

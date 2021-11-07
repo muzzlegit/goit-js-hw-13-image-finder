@@ -11,9 +11,9 @@ const onEmptyQuery = () => {
 const onError = () => {
   error({
     title: 'Oops',
-    text: 'Server error again? YES!',
+    text: 'We can\'t find. Try clarify your request OR \'server error\' again?',
     hide: true,
-    delay: 1000
+    delay: 3000
   });
 }
 

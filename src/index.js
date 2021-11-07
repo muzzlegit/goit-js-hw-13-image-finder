@@ -21,7 +21,7 @@ function onInput(e) {
   if (imagesApi.query === '') {
     return onEmptyQuery();
   }
-  loadMoreBut.show();
+
   gallery.clear();
   imagesApi.nullifyPage();
   fetchImages();
@@ -31,15 +31,15 @@ function fetchImages() {
 
   imagesApi.fetchImages()
     .then(res => {
-      if (res.total === 0) {
-        console.log(res);
+      if (res.length === 0) {
+
         return onError(); 
       }
-      console.log(res);
+      loadMoreBut.show();
       return res;
     })
     .then(gallery.renderImageCard)
-    .then(scroll);
+    .then(scroll).catch(error => console.log(error));
 }
 
 function scroll() {
