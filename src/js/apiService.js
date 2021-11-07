@@ -14,7 +14,6 @@ export default class ImagesApiService {
       .then(res => res.json())
       .then(({ hits }) => {
         this.incrementPage();
-        console.log(hits);
         this.firstArrivedElement = hits[0].id;
         return hits;
       });

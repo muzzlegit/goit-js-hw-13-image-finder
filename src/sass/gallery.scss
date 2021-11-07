@@ -33,6 +33,11 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    background-color: gray;
+  }
+  &__img:hover {
+    cursor: pointer;
   }
   &__stats {
     display: flex;
