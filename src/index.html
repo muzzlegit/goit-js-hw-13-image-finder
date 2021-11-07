@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>YO</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -12,18 +12,21 @@
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link href="../node_modules/@pnotify/core/dist/PNotify.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../node_modules/basiclightbox/dist/basicLightbox.min.css">
   </head>
   <body>
 
     <form class="search-form" id="search-form">
-      <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
-      <button type="submit" >Search</button>
-    </form>
-
-    <ul class="gallery">
+      <input class="search-form__input" type="text" name="query" autocomplete="off" placeholder="Search images..." />
+      <button class="search-form__button" type="submit" >Search</button>
       
-    </ul>
-
+    </form>
+   
+    <ul class="gallery"></ul>
+    <button class="load-more-button is-hidden" id="load-more"  type="button">LOAD MORE</button>
+    <div id="sentinel"></div>
     <script src="./index.js"></script>
+   
   </body>
 </html>
