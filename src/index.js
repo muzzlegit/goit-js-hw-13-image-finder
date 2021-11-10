@@ -18,7 +18,7 @@ refs.imagesGallery.addEventListener('click', onGallery);
 function onInput(e) {
   e.preventDefault();
   imagesApi.query = e.currentTarget.elements.query.value;  
-  if (imagesApi.query === '') {
+  if (imagesApi.query.trim() === '') {
     return onEmptyQuery();
   }
 
